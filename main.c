@@ -176,7 +176,6 @@ int main(int argc, char **argv)
         {
             render();
             draw_flag = false;
-            nanosleep(&tspec, &_);
         }
         duration = (double) (clock() - loop_start) / CLOCKS_PER_SEC;
 
@@ -188,5 +187,5 @@ int main(int argc, char **argv)
     }
 
     tearDown();
-    exit(0);
+    return 0;
 }
